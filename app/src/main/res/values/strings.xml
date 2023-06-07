@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ELearningQuizApplication</string>
+    <string name="welcome">Welcome!</string>
+    <string name="quiz_app">Quiz App!</string>
+    <string name="please_enter_your_name">Please enter your name.</string>
+    <string name="name">Name</string>
+    <string name="start">Start</string>
+    <string name="quiz_image">Quiz Image</string>
+    <string name="submit">Submit</string>
+    <string name="results">Results:</string>
+    <string name="option">Option</string>
+    <string name="congratulations">Congratulations, you rock!</string>
+    <string name="bravo">Bravo, you did great</string>
+    <string name="well_done">Well done</string>
+    <string name="next_time">Next time you will score better</string>
+    <string name="question">Question</string>
+    <string name="next_question">Next Question</string>
+    <string name="finish">Finish</string>
+    <string name="image">image</string>
+    <string name="home">home</string>
+    <string name="_true">True</string>
+    <string name="_false">False</string>
+    <string name="geo_score">Your Geography score is </string>
+    <string name="phys_score">Your Physics score is </string>
+    <string name="pro_score">Your Programming score is </string>
+    <string name="total_score">Your Total score is </string>
+    <string name="out_of_10">out of 10</string>
+    <string name="out_of_30">out of 30</string>
+    <string name="percentage">with a percentage of </string>
+    <string name="belong">What country does this flag belong to?</string>
+    <string name="first">The first chapter is difficult… Be careful!</string>
+    <string name="next">There are coming very interesting things…</string>
+    <string name="_final">Final chapter… Do your best!</string>
+    <string name="end">Lets find out what your results are… Fingers Crossed!</string>
+</resources>

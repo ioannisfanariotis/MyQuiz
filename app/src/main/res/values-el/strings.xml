@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ELearningQuizApplication</string>
+    <string name="welcome">Καλωσήρθατε!</string>
+    <string name="quiz_app">Κουίζ Εφαρμογή!</string>
+    <string name="please_enter_your_name">Παρακαλώ εισάγετε το όνομα σας.</string>
+    <string name="name">Όνομα</string>
+    <string name="start">εκκίνηση</string>
+    <string name="quiz_image">Εικόνα κουίζ</string>
+    <string name="submit">Υποβολή</string>
+    <string name="results">Αποτελέσματα:</string>
+    <string name="option">Επιλογή</string>
+    <string name="congratulations">Συγχαρητήρια, έσκισες!</string>
+    <string name="bravo">Μπράβο, τα πήγες περίφημα</string>
+    <string name="well_done">Τα πήγες καλά</string>
+    <string name="next_time">Δεν πειράζει, την επόμενη φορά θα τα πας καλύτερα</string>
+    <string name="question">Ερώτηση</string>
+    <string name="next_question">Επόμενη Ερώτηση</string>
+    <string name="finish">Τέλος</string>
+    <string name="image">εικόνα</string>
+    <string name="home">αρχική</string>
+    <string name="_true">Σωστό</string>
+    <string name="_false">Λάθος</string>
+    <string name="geo_score">Η Βαθμολογία σου στη Γεωγραφία είναι </string>
+    <string name="phys_score">Η Βαθμολογία σου στη Φυσική είναι </string>
+    <string name="pro_score">Η Βαθμολογία σου στην Πληροφορική είναι </string>
+    <string name="total_score">Η Συνολική Βαθμολογία σου είναι </string>
+    <string name="out_of_10">στα 10</string>
+    <string name="out_of_30">στα 30</string>
+    <string name="percentage">με ποσοστό </string>
+    <string name="belong">Σε ποια χώρα ανήκει αυτή η σημαία;</string>
+    <string name="first">Το πρώτο κεφάλαιο είναι δύσκολο… Πρόσεχε!</string>
+    <string name="next">Τώρα έρχονται πολύ ενδιαφέροντα πράγματα…</string>
+    <string name="_final">Τελευταίο κεφάλαιο… Βάλε τα δυνατά σου!</string>
+    <string name="end">Ας δούμε τα αποτελέσματα… Σταυρωμένα δάχτυλα!</string>
+</resources>
