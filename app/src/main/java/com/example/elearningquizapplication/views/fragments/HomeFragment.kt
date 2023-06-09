@@ -36,6 +36,10 @@ class HomeFragment : Fragment() {
                 goToGeographyFragment()
             }
         }
+
+        binding.gradesBtn.setOnClickListener {
+            goToGradesFragment()
+        }
     }
 
     private fun goToGeographyFragment() {
@@ -43,5 +47,10 @@ class HomeFragment : Fragment() {
         bundle.putString("name", name)
         NavHostFragment.findNavController(this)
             .navigate(R.id.action_HomeFragment_to_GeographyFragment, bundle)
+    }
+
+    private fun goToGradesFragment() {
+        NavHostFragment.findNavController(this)
+            .navigate(R.id.action_HomeFragment_to_GradesFragment)
     }
 }

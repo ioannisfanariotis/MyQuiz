@@ -6,12 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.NavHostFragment
+import com.example.elearningquizapplication.App
 import com.example.elearningquizapplication.R
 import com.example.elearningquizapplication.databinding.FragmentResultBinding
+import com.example.elearningquizapplication.models.Grades
+import com.example.elearningquizapplication.viewmodel.GradesViewModel
+import com.example.elearningquizapplication.viewmodel.ViewModelFactory
 
 class ResultFragment : Fragment() {
     private lateinit var binding: FragmentResultBinding
+    private val viewModel: GradesViewModel by viewModels { ViewModelFactory((requireActivity().application as App).gradesRepo) }
     private var name = " "
     private var correctGeo: Int = 0
     private var percentGeo: Double = 0.0
@@ -64,6 +70,9 @@ class ResultFragment : Fragment() {
             binding.description.text = resources.getString(R.string.well_done) + " " + name + "!"
         else
             binding.description.text = resources.getString(R.string.next_time) + " " + name + "!"
+
+        val grades = Grades(name, correctGeo, correctPhys, correctPro, totalCorrects)
+        viewModel.insertGrades(grades)
 
         binding.finishBtn.setOnClickListener{
             goToHomeFragment()

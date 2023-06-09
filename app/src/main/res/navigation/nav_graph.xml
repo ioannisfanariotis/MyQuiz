@@ -21,6 +21,11 @@
                 app:argType="string"
                 android:defaultValue=""/>
         </action>
+        <action
+            android:id="@+id/action_HomeFragment_to_GradesFragment"
+            app:destination="@id/GradesFragment"
+            app:popUpTo="@id/GradesFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
@@ -99,4 +104,9 @@
             app:popUpTo="@id/HomeFragment"
             app:popUpToInclusive="true"/>
     </fragment>
+
+    <fragment
+        android:id="@+id/GradesFragment"
+        android:name="com.example.elearningquizapplication.views.fragments.GradesFragment"
+        tools:layout="@layout/fragment_grades"/>
 </navigation>
