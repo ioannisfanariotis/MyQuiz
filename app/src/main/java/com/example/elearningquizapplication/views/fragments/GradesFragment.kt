@@ -14,12 +14,12 @@ import com.example.elearningquizapplication.databinding.FragmentGradesBinding
 import com.example.elearningquizapplication.models.Grades
 import com.example.elearningquizapplication.viewmodel.GradesViewModel
 import com.example.elearningquizapplication.viewmodel.ViewModelFactory
-import com.example.elearningquizapplication.views.adapters.Adapter
+import com.example.elearningquizapplication.views.adapters.GradesAdapter
 
 class GradesFragment : Fragment() {
     private lateinit var binding: FragmentGradesBinding
     private val viewModel: GradesViewModel by viewModels { ViewModelFactory((requireActivity().application as App).gradesRepo) }
-    private lateinit var adapter: Adapter
+    private lateinit var adapter: GradesAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         super.onCreate(savedInstanceState)
@@ -35,7 +35,7 @@ class GradesFragment : Fragment() {
 
     private fun setViews() {
         binding.gradesList.layoutManager = LinearLayoutManager(requireActivity())
-        adapter = Adapter(this@GradesFragment)
+        adapter = GradesAdapter(this@GradesFragment)
         binding.gradesList.adapter = adapter
     }
 

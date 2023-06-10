@@ -5,15 +5,15 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.example.elearningquizapplication.databinding.RecyclerViewBinding
+import com.example.elearningquizapplication.databinding.RecyclerViewGradesBinding
 import com.example.elearningquizapplication.models.Grades
 import com.example.elearningquizapplication.views.fragments.GradesFragment
 
-class Adapter (private val fragment: Fragment): RecyclerView.Adapter<Adapter.ViewHolder>() {
+class GradesAdapter (private val fragment: Fragment): RecyclerView.Adapter<GradesAdapter.ViewHolder>() {
 
     private var grades: List<Grades> = listOf()
 
-    class ViewHolder(binding: RecyclerViewBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(binding: RecyclerViewGradesBinding) : RecyclerView.ViewHolder(binding.root) {
         val name = binding.name
         val geo = binding.geoGrade
         val phys = binding.physGrade
@@ -23,7 +23,7 @@ class Adapter (private val fragment: Fragment): RecyclerView.Adapter<Adapter.Vie
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = RecyclerViewBinding.inflate(LayoutInflater.from(fragment.context), parent, false)
+        val binding = RecyclerViewGradesBinding.inflate(LayoutInflater.from(fragment.context), parent, false)
         return ViewHolder(binding)
     }
 
