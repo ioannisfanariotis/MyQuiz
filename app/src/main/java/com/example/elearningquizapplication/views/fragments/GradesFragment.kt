@@ -46,7 +46,7 @@ class GradesFragment : Fragment() {
                         if(it.isNotEmpty()) {
                             binding.gradesList.visibility = View.VISIBLE
                             binding.noGrades.visibility = View.GONE
-                            adapter.dishesList(it)
+                            adapter.gradesList(it)
                         } else {
                             binding.gradesList.visibility = View.GONE
                             binding.noGrades.visibility = View.VISIBLE

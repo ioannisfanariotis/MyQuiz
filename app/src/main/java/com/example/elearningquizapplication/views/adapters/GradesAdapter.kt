@@ -45,7 +45,7 @@ class GradesAdapter (private val fragment: Fragment): RecyclerView.Adapter<Grade
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun dishesList(list: List<Grades>){
+    fun gradesList(list: List<Grades>){
         grades = list
         notifyDataSetChanged()
     }
