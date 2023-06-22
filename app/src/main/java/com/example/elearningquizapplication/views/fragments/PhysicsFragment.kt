@@ -38,10 +38,7 @@ class PhysicsFragment : Fragment(), View.OnClickListener {
         name = arguments?.getString("name") ?: ""
         correctGeo = arguments?.getInt("correctGeo") ?: 0
 
-        binding.option1.setOnClickListener(this)
-        binding.option2.setOnClickListener(this)
         binding.submitBtn.setOnClickListener(this)
-
         physList = Constants.getPhysics()
         setQuestion()
     }
@@ -49,6 +46,8 @@ class PhysicsFragment : Fragment(), View.OnClickListener {
     @SuppressLint("SetTextI18n")
     private fun setQuestion() {
         defaultOption()
+        binding.option1.setOnClickListener(this)
+        binding.option2.setOnClickListener(this)
         physQuestions = physList[currentPos - 1]
         binding.progressBar.progress = currentPos
         binding.progressPercent.text = "${currentPos}/${binding.progressBar.max}"
@@ -95,6 +94,8 @@ class PhysicsFragment : Fragment(), View.OnClickListener {
                         }
                     }
                 } else {
+                    binding.option1.setOnClickListener(null)
+                    binding.option2.setOnClickListener(null)
                     val question = physList[currentPos-1]
                     if(question.correct != selected)
                         answerView(selected, R.drawable.wrong_option)

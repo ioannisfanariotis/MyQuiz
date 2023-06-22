@@ -36,12 +36,7 @@ class GeographyFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         name = arguments?.getString("name") ?: ""
 
-        binding.option1.setOnClickListener(this)
-        binding.option2.setOnClickListener(this)
-        binding.option3.setOnClickListener(this)
-        binding.option4.setOnClickListener(this)
         binding.submitBtn.setOnClickListener(this)
-
         geoList = Constants.getGeography()
         setQuestion()
     }
@@ -49,6 +44,10 @@ class GeographyFragment : Fragment(), View.OnClickListener {
     @SuppressLint("SetTextI18n")
     private fun setQuestion() {
         defaultOption()
+        binding.option1.setOnClickListener(this)
+        binding.option2.setOnClickListener(this)
+        binding.option3.setOnClickListener(this)
+        binding.option4.setOnClickListener(this)
         geoQuestions = geoList[currentPos - 1]
         binding.progressBar.progress = currentPos
         binding.progressPercent.text = "${currentPos}/${binding.progressBar.max}"
@@ -103,6 +102,10 @@ class GeographyFragment : Fragment(), View.OnClickListener {
                         }
                     }
                 } else {
+                    binding.option1.setOnClickListener(null)
+                    binding.option2.setOnClickListener(null)
+                    binding.option3.setOnClickListener(null)
+                    binding.option4.setOnClickListener(null)
                     val question = geoList[currentPos-1]
                     if(question.correct != selected)
                         answerView(selected, R.drawable.wrong_option)
